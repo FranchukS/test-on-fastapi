@@ -15,3 +15,6 @@ DB_CONFIG = {
         }
     }
 }
+
+
+TOKEN_EXPIRED_TIME = int(env("TOKEN_EXPIRED_TIME"))

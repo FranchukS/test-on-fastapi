@@ -1,4 +1,3 @@
-
 from tortoise import fields, Model
 
 
@@ -40,6 +39,9 @@ class Like(BaseBlogModel):
     )
 
 
-class User(Model):
-    # going to be implemented with FASTAPI-USERS
-    name = fields.CharField(max_length=255)
+class User(BaseBlogModel):
+    nickname = fields.CharField(max_length=255)
+    email = fields.CharField(max_length=255)
+    hash_password = fields.CharField(max_length=255)
+    last_login = fields.DatetimeField(auto_now_add=True)
+    last_activity = fields.DatetimeField(auto_now_add=True)
